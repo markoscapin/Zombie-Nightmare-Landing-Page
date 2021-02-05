@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zombie Nightmare</title>
+  <link rel="shortcut icon" href="images/dREAMBOY-logo-icon.ico">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,9 +26,22 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    .hero-wrapper,
-    .pricing-wrapper {
+    header {
+      position: fixed;
+      width: 100%;
+    }
+
+
+    .box {
+      padding: 5%;
+      width: 50%;
+    }
+
+    .wrapper {
       padding: 15rem 6.25rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
     figure {
@@ -46,6 +60,17 @@
       width: 100%;
       padding: 10px 0;
       max-width: 22rem;
+      cursor: pointer;
+    }
+
+    input:focus, textarea:focus, button:focus {
+      outline: none;
+    }
+
+    textarea {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
     }
 
 
@@ -60,7 +85,7 @@
 
     }
 
-    #header-img {
+    .header-img {
       width: 4rem;
       height: auto;
     }
@@ -85,24 +110,18 @@
     }
 
     /* Hero Section */
-    .hero-wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .hero-description {
-      text-align: left;
-      padding: 2%;
-      padding-left: 0;
-      padding-top: 0;
-    }
-
     .color-buttons {
       box-shadow: 0 1px 11px rgba(255, 255, 255, 0.25), 0 4px 10px rgba(0, 173, 181, 0.75);
       background-color: #00ADB5;
       color: #FFF;
       margin-top: 100px;
+    }
+
+
+    .color-buttons:hover {
+      background-color: #B8B295;
+      box-shadow: 0 1px 11px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(184,178,149, 0.75);
+
     }
 
     .hero-img-wrapper {
@@ -131,18 +150,12 @@
 
     /* Pricing Section */
     .pricing-wrapper {
-      display: flex;
-      flex-direction: row;
       background-color: #00ADB5;
       color: #FFF;
     }
 
     .pricing-wrapper .description {
       color: #FFF;
-    }
-
-    .pricing-description-box {
-      width: 50%;
     }
 
     .pricing-description-box .description {
@@ -161,58 +174,195 @@
       margin-top: 5%;
     }
 
+    .darker-buttons:hover {
+      color: #FFF;
+      background-color:#B8B295;
+      box-shadow: 0 1px 11px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(184,178,149, 0.75);
+    }
+
     .video {
       width: 35vw;
       height: 27vw;
     }
 
     /* About Section */
-    .about-wrapper {
-      display: flex;
-      padding: 5rem 6.25rem;
-      justify-content: space-between;
-    }
 
     .about-wrapper img {
       max-width: 10rem;
       height: auto;
     }
 
-    .about-wrapper p {
+    .about-description {
       color: #393E46;
-      width: 50%;
       line-height: 1.7;
       font-size: 1.5rem;
 
     }
 
+    /* Contact section */
+    .contact-wrapper {
+      background-color: #EEEEEE;
+      padding-top: 150px;
+    }
+    .contact-description {
+      text-align: center;
+    }
+
+    .shooting-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .form-group label, .form-group input, .form-group textarea  {
+      display: inline-block;
+      width: 100%;
+      max-width: 100%;
+      color: #222831;
+      font-size: 1rem;
+    }
+
+    .form-box .button {
+      max-width: 100%;
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .contact-title {
+      font-weight: 500;
+      font-size: 3rem;
+      color: #222831;
+    }
+
+    .contact-wrapper .description {
+      max-width: 100%;
+    }
+
+    .contact-wrapper .wrapper {
+      padding: 0 6.25rem 3.25rem;
+    }
+
+    input, textarea {
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 3px;
+      border: 0.5px solid;
+      box-shadow: inset -1px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-group {
+      margin: 10px 0;
+    }
+
+    /* Footer section */
+    footer {
+      background-color: #222831;
+      color: #FFF;
+    }
+
+    .copyright{
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+
+    .footer-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 6.25rem;
 
 
+    }
 
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      float: left;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+    }
 
+    .footer-nav {
+      display: none;
+    }
 
+    .footer-nav .navbar-list {
+      flex-direction: column;
+      float: none;
+      text-align: center;
+    }
 
+    .footer-nav .navbar-list li {
+      margin: 15px 0;
+    }
 
+    .footer-nav .navbar-list a {
+      margin:0;
+    }
 
-
-
-
-
-    @media (max-width: 1139px) {
+    @media (max-width: 900px) {
       /* beginning for the flex to be column instead of rows */
+      .wrapper {
+        flex-direction: column;
+      }
+
+      .box {
+        width: 100%;
+        text-align: center;
+      }
+
+      figure {
+        width: 100%;
+      }
+
+      .description {
+        max-width: 100%;
+      }
+
+      .video {
+        width: 60vw;
+        height: 40vw;
+      }
+
     }
 
     @media (max-width: 600px) {
+      header {
+        position: static;
+      }
+
       #nav-bar {
         flex-direction: column;
         text-align: center;
+      }
+      /* We will display none of the lists and let them see on the bottom instead */
+      #nav-bar .navbar-list {
+        display: none;
       }
 
       .navbar-list {
         flex-direction: column;
 
       }
-    }
+
+      .footer-nav {
+        display: block;
+      }
+
+      .wrapper,.contact-wrapper .wrapper {
+        padding: 4rem 0.5rem;
+      }
+
+      .contact-description {
+        padding: 0 0.5rem;
+      }
+
+      .pricing-title {
+        font-size: 3rem;
+      }
+
   </style>
 </head>
 
@@ -221,7 +371,7 @@
   <header id="header">
     <!-- nav bar with logo and list items -->
     <nav id="nav-bar">
-      <a href="#"><img id="header-img" src="images/dREAMBOY logo wht.png" alt="brand-logo"></a>
+      <a href="#"><img id="header-img" class="header-img" src="images/dREAMBOY logo wht.png" alt="brand-logo"></a>
 
       <!-- Nav links -->
       <ul class="navbar-list">
@@ -238,8 +388,8 @@
   <main>
     <!-- Hero-section -->
     <section class="hero-section">
-      <article class="hero-wrapper">
-        <div class="hero-description">
+      <article class="hero-wrapper wrapper">
+        <div class="hero-description box">
           <h1 id="title">Out now!</h1>
           <p class="description">The new game self-developed by dREAMBOY is here!</p>
           <form action="https://drive.google.com/drive/folders/1Q8Ln04Srqk2vOWfrjYfQ9cr6-Ax43Rzn">
@@ -247,7 +397,7 @@
           </form>
         </div>
 
-        <figure class="hero-img-wrapper">
+        <figure class="hero-img-wrapper box">
           <img class="hero-img" src="images/CD-cover.png" alt="CD cover">
         </figure>
       </article>
@@ -256,15 +406,15 @@
 
     <!-- Pricing Section -->
     <section id="pricing-section">
-      <article class="pricing-wrapper">
+      <article class="pricing-wrapper wrapper">
 
-        <figure class="gameplay-video-box">
+        <figure class="gameplay-video-box box">
           <!-- This allow to see Youtube videos -->
           <iframe class="video" src="https://www.youtube-nocookie.com/embed/1cxEBYafi30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </figure>
 
 
-        <div class="pricing-description-box">
+        <div class="pricing-description-box box">
           <h2 class="pricing-title">Immersive</h2>
           <p class="description">low poly game powered by <br>Unreal Engine 4 <sup>TM</sup></p>
 
@@ -279,51 +429,82 @@
 
     <!-- About Section -->
     <section id="about-section">
-      <article class="about-wrapper">
+      <article class="about-wrapper wrapper">
 
-        <p>dREAMBOY is a self-game developer in love with Unreal Engine technology. He has 2+ years experience on game developing and it is a game lover since he was born!</p>
+        <div class="about-description box">
+          <p>dREAMBOY is a self-game developer in love with Unreal Engine technology. He has 2+ years experience on game developing and it is a game lover since he was born!</p>
+        </div>
+
         <figure class="img-about-box">
           <img src="images/dREAMBOY logo.png" alt="logo">
         </figure>
-
       </article>
-
     </section>
-
-
 
     <!-- Contact Section -->
     <section id="contact-section">
-
-      <form id="form" action="https://www.freecodecamp.com/email-submit">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" value="" required placeholder="Enter your name">
+      <article class="contact-wrapper">
+        <div class="contact-description">
+          <h3 class="contact-title">Let's create a new game together</h3>
+          <p class="description">Want to create the next generation of games? Contact me!</p>
         </div>
 
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" value="" required placeholder="Enter your email">
+        <div class="contact-flex-container wrapper">
+          <figure class="contact-img-box box">
+            <img class="shooting-img" src="images/Landing.png" alt="shooting image">
+          </figure>
+
+          <div class="form-box box">
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="" required placeholder="Enter your name">
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" value="" required placeholder="Enter your email">
+              </div>
+
+              <div class="form-group">
+                <label for="comment">Leave a message</label>
+                <textarea id="comment" name="comment" rows="8" placeholder="Leave a message here..."></textarea>
+              </div>
+
+              <button class="color-buttons button" id="sumbit" type="submit" name="button">Submit</button>
+
+            </form>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="comment">Leave a message</label>
-          <textarea id="comment" name="comment" rows="8" cols="80" placeholder="Leave a message here..."></textarea>
-        </div>
 
-        <button id="sumbit" type="submit" name="button">Submit</button>
 
-      </form>
 
+      </article>
     </section>
-
 
   </main>
 
-
-
   <!-- here's the footer -->
   <footer>
+    <div class="footer-wrapper wrapper">
+      <div class="footer-info">
+        <img class="header-img" src="images/dREAMBOY logo wht.png" alt="logo">
+        <p>dREAMBOY<br>GameStudio</p>
+      </div>
+      <div class="footer-nav">
+        <!-- Nav links -->
+        <ul class="navbar-list">
+          <li class="nav-link"><a href="#">Home</a></li>
+          <li class="nav-link"><a href="#pricing-section">Pricing</a></li>
+          <li class="nav-link"><a href="#about-section">About</a></li>
+          <li class="nav-link"><a href="#contact-section">Contact</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <p class="copyright" >All rights reserved to dREAMBOY. Made by <a href="https://github.com/markoscapin">Marco Scapin</a></p>
+
 
   </footer>
 
