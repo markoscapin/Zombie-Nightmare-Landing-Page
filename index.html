@@ -1,73 +1,333 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zombie Nightmare</title>
 
-    <!-- Google Font -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zombie Nightmare</title>
 
-    <style>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    </style>
-  </head>
-  <body>
-    <!-- here's the nav bar -->
-    <header id="header">
-      <!--how to make a nav?
-      Steps:
-      1- create a div for the entire section -> display: flex
-      2- create an <ul class="navbar"></ul>
-      3- add before the ul element the img of #2
-      4-
-       -->
-      <img id="header-img" src="images/dREAMBOY logo wht.png" alt="brand-logo">
-      <!-- my navbar -->
-      <nav id="nav-bar">
-        <ul>
-          <li class="nav-link"><a href="#">Home</a></li>
-          <li class="nav-link"><a href="#pricing-section">Pricing</a></li>
-          <li class="nav-link"><a href="#about-section">About</a></li>
-          <li class="nav-link"><a href="#contact-section">Contact</a></li>
-
-        </ul>
-      </nav>
-
-    </header>
+  <!-- Font-Awesome  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- here's the body content -->
-    <main>
-      <!-- Pricing Section -->
-      <section id="pricing-section">
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
 
-      </section>
+    .hero-wrapper,
+    .pricing-wrapper {
+      padding: 15rem 6.25rem;
+    }
 
+    figure {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-
-      <!-- About Section -->
-      <section id="about-section">
-
-      </section>
-
-
-
-      <!-- Contact Section -->
-      <section id="contact-section">
-
-      </section>
-
-
-    </main>
-
-
-
-    <!-- here's the footer -->
-    <footer>
-
-    </footer>
+    /* default color buttons */
+    .button {
+      border-color: transparent;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 1.5rem;
+      width: 100%;
+      padding: 10px 0;
+      max-width: 22rem;
+    }
 
 
-  </body>
+    /* HEADER */
+    #nav-bar {
+      position: sticky;
+      top: 0;
+      display: flex;
+      background-color: #222831;
+      justify-content: space-between;
+      padding: 15px 100px;
+
+    }
+
+    #header-img {
+      width: 4rem;
+      height: auto;
+    }
+
+    .navbar-list {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      float: right;
+    }
+
+    .nav-link a {
+      text-decoration: none;
+      margin-left: 3.75rem;
+      color: #EEEEEE;
+    }
+
+    .nav-link a:hover {
+      color: #FFFFFF;
+      border-bottom: solid;
+      padding-bottom: 20px;
+    }
+
+    /* Hero Section */
+    .hero-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .hero-description {
+      text-align: left;
+      padding: 2%;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    .color-buttons {
+      box-shadow: 0 1px 11px rgba(255, 255, 255, 0.25), 0 4px 10px rgba(0, 173, 181, 0.75);
+      background-color: #00ADB5;
+      color: #FFF;
+      margin-top: 100px;
+    }
+
+    .hero-img-wrapper {
+/* add some paddings? */
+    }
+
+    .hero-img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+
+    #title {
+      font-weight: 900;
+      font-size: 4.25rem;
+    }
+
+    .description {
+      font-weight: 300;
+      font-size: 1.25rem;
+      max-width: 22.8rem;
+      color: #393E46;
+      line-height: 1.7
+    }
+
+
+    /* Pricing Section */
+    .pricing-wrapper {
+      display: flex;
+      flex-direction: row;
+      background-color: #00ADB5;
+      color: #FFF;
+    }
+
+    .pricing-wrapper .description {
+      color: #FFF;
+    }
+
+    .pricing-description-box {
+      width: 50%;
+    }
+
+    .pricing-description-box .description {
+      font-weight: 200;
+    }
+
+    .pricing-title {
+      font-size: 3.75rem;
+      font-weight: bold;
+    }
+
+    .darker-buttons {
+      background-color: #222831;
+      color: #FFF;
+      box-shadow: 0 1px 11px rgba(255, 255, 255, 0.25), 0 4px 10px rgba(34, 40, 49, 0.75);
+      margin-top: 5%;
+    }
+
+    .video {
+      width: 35vw;
+      height: 27vw;
+    }
+
+    /* About Section */
+    .about-wrapper {
+      display: flex;
+      padding: 5rem 6.25rem;
+      justify-content: space-between;
+    }
+
+    .about-wrapper img {
+      max-width: 10rem;
+      height: auto;
+    }
+
+    .about-wrapper p {
+      color: #393E46;
+      width: 50%;
+      line-height: 1.7;
+      font-size: 1.5rem;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 1139px) {
+      /* beginning for the flex to be column instead of rows */
+    }
+
+    @media (max-width: 600px) {
+      #nav-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .navbar-list {
+        flex-direction: column;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- here's the nav bar -->
+  <header id="header">
+    <!-- nav bar with logo and list items -->
+    <nav id="nav-bar">
+      <a href="#"><img id="header-img" src="images/dREAMBOY logo wht.png" alt="brand-logo"></a>
+
+      <!-- Nav links -->
+      <ul class="navbar-list">
+        <li class="nav-link"><a href="#">Home</a></li>
+        <li class="nav-link"><a href="#pricing-section">Pricing</a></li>
+        <li class="nav-link"><a href="#about-section">About</a></li>
+        <li class="nav-link"><a href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- here's the main content -->
+  <main>
+    <!-- Hero-section -->
+    <section class="hero-section">
+      <article class="hero-wrapper">
+        <div class="hero-description">
+          <h1 id="title">Out now!</h1>
+          <p class="description">The new game self-developed by dREAMBOY is here!</p>
+          <form action="https://drive.google.com/drive/folders/1Q8Ln04Srqk2vOWfrjYfQ9cr6-Ax43Rzn">
+            <button class="color-buttons button" type="submit" name="button">Download for Windows</button>
+          </form>
+        </div>
+
+        <figure class="hero-img-wrapper">
+          <img class="hero-img" src="images/CD-cover.png" alt="CD cover">
+        </figure>
+      </article>
+
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing-section">
+      <article class="pricing-wrapper">
+
+        <figure class="gameplay-video-box">
+          <!-- This allow to see Youtube videos -->
+          <iframe class="video" src="https://www.youtube-nocookie.com/embed/1cxEBYafi30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </figure>
+
+
+        <div class="pricing-description-box">
+          <h2 class="pricing-title">Immersive</h2>
+          <p class="description">low poly game powered by <br>Unreal Engine 4 <sup>TM</sup></p>
+
+          <form action="https://drive.google.com/drive/folders/1Q8Ln04Srqk2vOWfrjYfQ9cr6-Ax43Rzn">
+            <button class="darker-buttons button" type="submit" name="button">Get it now for free!</button>
+          </form>
+        </div>
+
+
+      </article>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section">
+      <article class="about-wrapper">
+
+        <p>dREAMBOY is a self-game developer in love with Unreal Engine technology. He has 2+ years experience on game developing and it is a game lover since he was born!</p>
+        <figure class="img-about-box">
+          <img src="images/dREAMBOY logo.png" alt="logo">
+        </figure>
+
+      </article>
+
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact-section">
+
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" value="" required placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" value="" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="comment">Leave a message</label>
+          <textarea id="comment" name="comment" rows="8" cols="80" placeholder="Leave a message here..."></textarea>
+        </div>
+
+        <button id="sumbit" type="submit" name="button">Submit</button>
+
+      </form>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- here's the footer -->
+  <footer>
+
+  </footer>
+
+
+</body>
+
 </html>
